@@ -6,6 +6,8 @@ angular.module('urbanApp')
 
 function userCtrl($scope, $http,$rootScope) {
 
+    var userType = $rootScope.userType;
+
     $http({
         method: 'GET',
         url: 'https://api.myjson.com/bins/4q238',

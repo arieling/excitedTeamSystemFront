@@ -9,7 +9,7 @@ function sessionCtrl($scope, $state, $rootScope,AuthenticationService) {
   };
 
   $scope.submit = function () {
-    console.log("123");
+  
     $scope.dataLoading = true;
     AuthenticationService.Login($scope.email, $scope.password, function(response) {
       if(response.success) {
@@ -17,7 +17,8 @@ function sessionCtrl($scope, $state, $rootScope,AuthenticationService) {
         AuthenticationService.SetCredentials($scope.email, $scope.password);
 
         console.log($rootScope.globals.currentUser.username);
-  
+        $rootScope.userType = $scope.password;
+
         $state.go('app.message');
         console.log($rootScope.userType);
       } else {

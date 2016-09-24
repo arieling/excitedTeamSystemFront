@@ -2,7 +2,7 @@
 
   <!-- logo -->
   <div class="brand-logo">
-    <img data-ng-src="images/logo.png" height="15" alt="">
+    <img data-ng-src="images/rbcLogo.jpg" height="100" alt="">
   </div>
   <!-- /logo -->
 
@@ -37,14 +37,14 @@
     </li>
 
     <li ui-sref-active="active">
-      <a href="#/candidates" ng-show="globals.currentUser.username=='investor@investor.com'">
+      <a href="#/candidates" ng-if="userType=='investor'">
         <i class="fa fa-flask"></i>
         <span>Candidates To Invest</span>
       </a>
     </li>
 
     <li ui-sref-active="active">
-      <a href="#/candidatesToLoan" ng-show="globals.currentUser.username=='admin@admin.com'">
+      <a href="#/candidatesToLoan" ng-if="userType=='admin'">
         <i class="fa fa-flask"></i>
         <span>Candidates To Loan</span>
       </a>
@@ -52,16 +52,23 @@
 
 
     <li ui-sref-active="active">
-      <a href="#/loan">
+      <a href="#/loan" ng-if="userType=='client'">
         <i class="fa fa-flask"></i>
         <span>LoanStatus</span>
       </a>
     </li>
 
     <li ui-sref-active="active">
-      <a href="#/fund">
+      <a href="#/fund" ng-if="userType=='client'">
         <i class="fa fa-flask"></i>
-        <span>Fund</span>
+        <span>Investment</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active">
+      <a href="#/fund" ng-if="userType!='client'">
+        <i class="fa fa-flask"></i>
+        <span>My Investment</span>
       </a>
     </li>
 

@@ -9,6 +9,7 @@ function AccountCtrl($scope, $http,$rootScope) {
     headers: {'Content-Type': 'application/json'}
   }).success(function (result) {
     $scope.accountList = result.data;
-    console.log($rootScope.accountType);
+    $scope.userType = $rootScope.userType;
+    console.log($rootScope.userType);
   });
 };

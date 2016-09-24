@@ -2,161 +2,38 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Loan Summary</div>
+                <div class="panel-heading">Investment Summary</div>
               <div class="panel-body">
                 <div class="no-more-tables">
                   <table class="table table-striped mb0">
                         <thead>
                         <tr>
-                            <th>name</th>
-                            <th>value</th>
-                            <th>Action</th>
+                            <th>Company {{accountType}}</th>
+                            <th>Investor</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
                         </tr>
                         </thead>
                     <tbody>
                     <tr ng-repeat="fundDetailGeneral in fundDetailGeneralList">
-                      <td data-title="Name">{{fundDetailGeneral.name}}</td>
-                      <td data-title="Value">{{fundDetailGeneral.value}}</td>
-                      <td data-title="Action"><button>Edit</button></td>
+                      <td data-title="Company">{{fundDetailGeneral.Company}}</td>
+                      <td data-title="Investor">{{fundDetailGeneral.Investor}}</td>
+                      <td data-title="Amount">{{fundDetailGeneral.Amount}}</td>
+                      <td data-title="Date">{{fundDetailGeneral.Date}}</td>
+                      <td data-title="Status">{{fundDetailGeneral.Status}}</td>
                     </tr>
                     </tbody>
-                    </table>
+                  </table>
+                  <button ng-if="accountType=='admin'">Manage</button>
+                  <button ng-if="accountType=='client'">Get More Investment</button>
+                  <button ng-if="accountType=='investor'">Find More Companies</button>
                 </div>
             </div>
         </div>
           </div>
     </div>
 
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Business Partner</div>
-              <div class="panel-body">
-                <div class="no-more-tables">
-                  <table class="table table-striped mb0">
-                                <thead>
-                                <tr>
-                                    <th>Role</th>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                    <tbody>
-                    <tr ng-repeat="fundDetailBusinessPartner in fundDetailBusinessPartnerList">
-                      <td data-title="role">{{fundDetailBusinessPartner.role}}</td>
-                      <td data-title="name">{{fundDetailBusinessPartner.name}}</td>
-                      <td data-title="address">{{fundDetailBusinessPartner.address}}</td>
-                      <td data-title="Action"><a href='#/partnerDetail'>View</a> <button>Delete</button></td>
-                    </tr>
-                    </tbody>
-                            </table>
-                            <button class="btn btn-primary pull-right">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Condition</div>
-              <div class="panel-body">
-                <div class="no-more-tables">
-                  <table class="table table-striped mb0">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Status</th>
-                                    <th>Required</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                    <tbody>
-                    <tr ng-repeat="fundDetailCondition in fundDetailConditionList">
-                      <td data-title="name">{{fundDetailCondition.name}}</td>
-                      <td data-title="status">{{fundDetailCondition.status}}</td>
-                      <td data-title="required">{{fundDetailCondition.required}}</td>
-                      <td data-title="Action"><a href='#/conditionDetail'>View</a> <button>Delete</button></td>
-                    </tr>
-                    </tbody>
-
-                            </table>
-                            <button class="btn btn-primary pull-right">Add</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Attachment</div>
-              <div class="panel-body">
-                <div class="no-more-tables">
-                  <table class="table table-striped mb0">
-                                <thead>
-                                <tr>
-                                    <th>File Name</th>
-                                    <th>File Type</th>
-                                    <th>Description</th>
-                                    <th>Created Date</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                    <tbody>
-                    <tr ng-repeat="fundDetailAttachment in fundDetailAttachmentList">
-                      <td data-title="FileName">{{fundDetailAttachment.FileName}}</td>
-                      <td data-title="FileType">{{fundDetailAttachment.FileType}}</td>
-                      <td data-title="Description">{{fundDetailAttachment.Description}}</td>
-                      <td data-title="CreatedDate">{{fundDetailAttachment.CreatedDate}}</td>
-                      <td data-title="Action"><button>Edit</button> <button>Delete</button></td>
-                    </tr>
-                    </tbody>
-                            </table>
-                            <button class="btn btn-primary pull-right">Add</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Comments</div>
-              <div class="panel-body">
-                <div class="no-more-tables">
-                  <table class="table table-striped mb0">
-                                <thead>
-                                <tr>
-                                    <th>Content</th>
-                                    <th>Author</th>
-                                    <th>Created Date</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                    <tbody>
-                    <tr ng-repeat="fundDetailComments in fundDetailCommentsList">
-                      <td data-title="FileName">{{fundDetailComments.Content}}</td>
-                      <td data-title="FileType">{{fundDetailComments.Author}}</td>
-                      <td data-title="Description">{{fundDetailComments.CreatedDate}}</td>
-                      <td data-title="Action"><button>Edit</button> <button>Delete</button></td>
-                    </tr>
-                    </tbody>
-                            </table>
-                            <button class="btn btn-primary pull-right">Add</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
 
 </div>
