@@ -1,0 +1,33 @@
+<div>
+<div class="panel" ng-controller="LoanCtrl">
+  <div class="panel-heading">
+    Loan List
+  </div>
+  <div class="panel-body">
+    <div class="no-more-tables">
+      <table class="table table-striped mb0">
+        <thead>
+        <tr>
+          <th>status</th>
+          <th>applicant</th>
+          <th>application</th>
+          <th class="numeric">principal</th>
+          <th>createdDate</th>
+          <th class="numeric">action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="loan in loanList">
+          <td data-title="Status">{{loan.status}}</td>
+          <td data-title="Applicant">{{loan.applicant}}</td>
+          <td data-title="Application">{{loan.application}}</td>
+          <td data-title="Principal">{{loan.principal}}</td>
+          <td data-title="CreatedDate">{{loan.date}}</td>
+          <td data-title="Action"><a href='#/loanDetail'>View</a> <button>Delete</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

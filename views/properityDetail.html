@@ -1,0 +1,57 @@
+<div ng-controller="PropertyDetailCtrl">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">General</div>
+              <div class="panel-body">
+                <div class="no-more-tables">
+                  <table class="table table-striped mb0">
+                        <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>value</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                      <tbody>
+                      <tr ng-repeat="propertyDetailAddress in propertyDetailAddressList">
+                        <td data-title="Name">{{propertyDetailAddress.name}}</td>
+                        <td data-title="Value">{{propertyDetailAddress.value}}</td>
+                        <td data-title="Action"><button>Edit</button></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Address</div>
+              <div class="panel-body">
+                <div class="no-more-tables">
+                  <table class="table table-striped mb0">
+                        <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>value</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                      <tbody>
+                      <tr ng-repeat="propertyDetailGeneral in propertyDetailGeneralList">
+                        <td data-title="Name">{{propertyDetailGeneral.name}}</td>
+                        <td data-title="Value">{{propertyDetailGeneral.value}}</td>
+                        <td data-title="Action"><button>Edit</button></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>

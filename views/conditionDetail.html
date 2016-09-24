@@ -1,0 +1,94 @@
+<div ng-controller="ConditionDetailCtrl">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">General</div>
+              <div class="panel-body">
+                <div class="no-more-tables">
+                  <table class="table table-striped mb0">
+                        <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>value</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                    <tbody>
+                    <tr ng-repeat="conditionDetailGeneral in conditionDetailGeneralList">
+                      <td data-title="Name">{{conditionDetailGeneral.name}}</td>
+                      <td data-title="Value">{{conditionDetailGeneral.value}}</td>
+                      <td data-title="Action"><button>Edit</button></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Attachment</div>
+              <div class="panel-body">
+                <div class="no-more-tables">
+                  <table class="table table-striped mb0">
+                                <thead>
+                                <tr>
+                                    <th>File Name</th>
+                                    <th>File Type</th>
+                                    <th>Description</th>
+                                    <th>Created Date</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                    <tbody>
+                    <tr ng-repeat="conditionDetailAttachment in conditionDetailAttachmentList">
+                      <td data-title="FileName">{{conditionDetailAttachment.FileName}}</td>
+                      <td data-title="FileType">{{conditionDetailAttachment.FileType}}</td>
+                      <td data-title="Description">{{conditionDetailAttachment.Description}}</td>
+                      <td data-title="CreatedDate">{{conditionDetailAttachment.CreatedDate}}</td>
+                      <td data-title="Action"><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    </tbody>
+                            </table>
+                            <button class="btn btn-primary pull-right">Add</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Comments</div>
+              <div class="panel-body">
+                <div class="no-more-tables">
+                  <table class="table table-striped mb0">
+                                <thead>
+                                <tr>
+                                    <th>Content</th>
+                                    <th>Author</th>
+                                    <th>Created Date</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                    <tbody>
+                    <tr ng-repeat="conditionDetailComments in conditionDetailCommentsList">
+                      <td data-title="Content">{{conditionDetailComments.Content}}</td>
+                      <td data-title="Author">{{conditionDetailComments.Author}}</td>
+                      <td data-title="CreatedDate">{{conditionDetailComments.CreatedDate}}</td>
+                      <td data-title="Action"><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    </tbody>
+                            </table>
+                            <button class="btn btn-primary pull-right">Add</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

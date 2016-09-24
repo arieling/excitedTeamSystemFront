@@ -1,0 +1,54 @@
+<div class="brand">
+
+  <!-- logo -->
+  <div class="brand-logo">
+    <img data-ng-src="images/logo.png" height="15" alt="">
+  </div>
+  <!-- /logo -->
+
+  <!-- toggle small sidebar menu -->
+  <a href="javascript:;" class="toggle-sidebar hidden-xs hamburger-icon v3" data-ng-click="app.layout.isSmallSidebar = !app.layout.isSmallSidebar">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <!-- /toggle small sidebar menu -->
+
+</div>
+
+<!-- main navigation -->
+<nav role="navigation" side-navigation>
+
+  <ul class="nav">
+
+    <li ui-sref-active="active">
+      <a href="#/account">
+        <i class="fa fa-flask"></i>
+        <span>Account</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active">
+      <a href="#/loan">
+        <i class="fa fa-flask"></i>
+        <span>Loan</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active">
+      <a href="#/fund">
+        <i class="fa fa-flask"></i>
+        <span>Fund</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active">
+      <a href="#/message">
+        <i class="fa fa-flask"></i>
+        <span>Message</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- /main navigation -->

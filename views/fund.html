@@ -1,0 +1,68 @@
+<div ng-controller="FundCtrl">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Fund List</div>
+          <div class="panel-body">
+            <div class="no-more-tables">
+              <table class="table table-striped mb0">
+                    <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Investor</th>
+                        <th>Application</th>
+                        <th>Amount</th>
+                        <th>Created Date</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                <tbody>
+                <tr ng-repeat="fund in fundList">
+                  <td data-title="status">{{fund.status}}</td>
+                  <td data-title="investor">{{fund.investor}}</td>
+                  <td data-title="application">{{fund.application}}</td>
+                  <td data-title="amount">{{fund.amount}}</td>
+                  <td data-title="createdDate">{{fund.createdDate}}</td>
+                  <td data-title="Action"><a href='#/fundDetail'>View</a> <button>Delete</button></td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Recommanded Fund List</div>
+              <div class="panel-body">
+                <div class="no-more-tables">
+                  <table class="table table-striped mb0">
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Investor</th>
+                            <th>Application</th>
+                            <th>Amount</th>
+                            <th>Created Date</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                    <tr ng-repeat="recommandFund in recommandFundList">
+                      <td data-title="status">{{recommandFund.status}}</td>
+                      <td data-title="investor">{{recommandFund.investor}}</td>
+                      <td data-title="application">{{recommandFund.application}}</td>
+                      <td data-title="amount">{{recommandFund.amount}}</td>
+                      <td data-title="createdDate">{{recommandFund.createdDate}}</td>
+                      <td data-title="Action"><a href='#/fundDetail'>View</a> <button>Delete</button></td>
+                    </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>

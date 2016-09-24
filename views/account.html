@@ -1,0 +1,29 @@
+<div ng-controller="AccountCtrl">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Account Information</div>
+        <div class="panel-body">
+          <div class="no-more-tables">
+            <table class="table table-striped mb0">
+              <thead>
+              <tr>
+                <th>Field</th>
+                <th>value</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="account in accountList">
+                <td data-title="Name">{{account.name}}</td>
+                <td data-title="Value">{{account.value}}</td>
+                <td data-title="Action"><button>Edit</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

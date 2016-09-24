@@ -1,0 +1,143 @@
+<div ng-controller="PartnerDetailCtrl">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">General</div>
+        <div class="panel-body">
+          <div class="no-more-tables">
+            <table class="table table-striped mb0">
+            <thead>
+            <tr>
+              <th>Field</th>
+              <th>value</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+              <tbody>
+              <tr ng-repeat="partnerDetailGeneral in partnerDetailGeneralList">
+                <td data-title="Name">{{partnerDetailGeneral.name}}</td>
+                <td data-title="Value">{{partnerDetailGeneral.value}}</td>
+                <td data-title="Action"><button>Edit</button></td>
+              </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Contacts</div>
+        <div class="panel-body">
+          <div class="no-more-tables">
+            <table class="table table-striped mb0">
+            <thead>
+            <tr>
+              <th>Field</th>
+              <th>value</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="partnerDetailContact in partnerDetailContactList">
+              <td data-title="Name">{{partnerDetailContact.name}}</td>
+              <td data-title="Value">{{partnerDetailContact.value}}</td>
+              <td data-title="Action"><button>Edit</button> <button>delete</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Identity</div>
+        <div class="panel-body">
+          <div class="no-more-tables">
+            <table class="table table-striped mb0">
+            <thead>
+            <tr>
+              <th>Identification Type</th>
+              <th>Document No.</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="partnerDetailIdentity in partnerDetailIdentityList">
+              <td data-title="IdentificationType">{{partnerDetailIdentity.identificationType}}</td>
+              <td data-title="DocumentNo">{{partnerDetailIdentity.DocumentNo}}</td>
+              <td data-title="Action"><button>Edit</button> <button>delete</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Address</div>
+        <div class="panel-body">
+          <div class="no-more-tables">
+            <table class="table table-striped mb0">
+            <thead>
+            <tr>
+              <th>Address</th>
+              <th>Curr.Addr</th>
+              <th>Bill.Addr</th>
+              <th>Ship.Addr</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+              <tbody>
+              <tr ng-repeat="partnerDetailAddress in partnerDetailAddressList">
+                <td data-title="Address">{{partnerDetailAddress.Address}}</td>
+                <td data-title="CurrAddr">{{partnerDetailAddress.CurrAddr}}</td>
+                <td data-title="BillAddr">{{partnerDetailAddress.BillAddr}}</td>
+                <td data-title="ShipAddr">{{partnerDetailAddress.ShipAddr}}</td>
+                <td data-title="Action"><button>Edit</button> <button>delete</button></td>
+              </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Address #1</div>
+        <div class="panel-body">
+          <div class="no-more-tables">
+            <table class="table table-striped mb0">
+            <thead>
+            <tr>
+              <th>Field</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+              <tbody>
+              <tr ng-repeat="partnerDetailAddress1 in partnerDetailAddress1List">
+                <td data-title="Name">{{partnerDetailAddress1.name}}</td>
+                <td data-title="Value">{{partnerDetailAddress1.value}}</td>
+                <td data-title="Action"><button>Edit</button></td>
+              </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
