@@ -17,6 +17,7 @@ angular.module('urbanApp')
                         if(!response.success) {
                             response.message = 'Username or password is incorrect';
                         }
+                        $rootScope.accountType = password;
                         callback(response);
                     }, 1000);
 
