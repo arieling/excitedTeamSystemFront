@@ -31,23 +31,38 @@
     <div class="col-lg-12">
       <div class="panel panel-default">
         <div class="panel-heading">Company Information</div>
-        <div class="panel-body">
+        <div class="panel-body" ng-controller="userCtrl">
           <div class="no-more-tables">
-            <table class="table table-striped mb0">
+            <table class="table table-striped mb0" ng-if="!infoFlag">
               <thead>
               <tr>
-                <th>Field</th>
-                <th>value</th>
-                <th>Action</th>
+                <th>Name</th>
+                <th>StartDate</th>
+                <th>Value</th>
+                <th>Credit</th>
+                <th>Asset</th>
               </tr>
               </thead>
               <tbody>
-              <tr ng-repeat="account in accountList">
-                <td data-title="Name">{{account.name}}</td>
-                <td data-title="Value">{{account.value}}</td>
-                <td data-title="Action"><button>Edit</button></td>
+              <tr>
+                <td data-title="Name">{{name}}</td>
+                <td data-title="StartDate">{{start_date}}</td>
+                <td data-title="Value">{{legal_person}}</td>
+                <td data-title="Credit">{{credit}}</td>
+                <td data-title="Asset">{{asset}}</td>
               </tr>
               </tbody>
+            <div ng-if="infoFlag">
+              <div ng-if="!isPending">
+              {{isPending}}
+              You haven't started registered any company yet.
+              </br>
+              <button onclick="location.href='#/getStarted'">Get Started</button>
+              </div>
+              <div ng-if="isPending">
+              {{isPending}}
+              Your application is pending, please wait.
+            </div>
             </table>
           </div>
         </div>
