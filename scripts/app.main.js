@@ -8,7 +8,7 @@ angular
       $scope.mobileView = 767;
 
       $scope.app = {
-        name: 'ZIPFIN',
+        name: 'RBC',
         author: 'HUAN',
         version: '1.0.0',
         year: (new Date()).getFullYear(),
