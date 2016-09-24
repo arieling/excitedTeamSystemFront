@@ -25,6 +25,11 @@ angular
           templateUrl: 'views/common/layout.html',
         })
 
+          .state('app.getStarted', {
+              url: '/getStarted',
+              templateUrl: 'views/getStarted.html'
+          })
+
 
         .state('app.loan', {
           url: '/loan',
