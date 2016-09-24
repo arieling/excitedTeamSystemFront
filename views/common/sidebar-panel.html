@@ -29,19 +29,6 @@
     </li>
 
 
-    <li ui-sref-active="active" ng-hide="infoFlag">
-      <a href="#/getStarted">
-        <i class="fa fa-flask"></i>
-        <span>GetStarted</span>
-      </a>
-    </li>
-
-    <li ui-sref-active="active" ng-hide="infoFlag">
-      <a href="#/getStarted">
-        <i class="fa fa-flask"></i>
-        <span>GetStarted</span>
-      </a>
-    </li>
 
     <li ui-sref-active="active">
       <a href="#/account">
@@ -51,9 +38,24 @@
     </li>
 
     <li ui-sref-active="active">
+      <a href="#/candidates" ng-show="globals.currentUser.username=='investor@investor.com'">
+        <i class="fa fa-flask"></i>
+        <span>Candidates To Invest</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active">
+      <a href="#/candidatesToLoan" ng-show="globals.currentUser.username=='admin@admin.com'">
+        <i class="fa fa-flask"></i>
+        <span>Candidates To Loan</span>
+      </a>
+    </li>
+
+
+    <li ui-sref-active="active">
       <a href="#/loan">
         <i class="fa fa-flask"></i>
-        <span>Loan</span>
+        <span>LoanStatus</span>
       </a>
     </li>
 

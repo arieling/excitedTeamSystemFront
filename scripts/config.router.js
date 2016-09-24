@@ -36,6 +36,15 @@ angular
           templateUrl: 'views/loan.html'
         })
 
+          .state('app.candidates', {
+              url: '/candidates',
+              templateUrl: 'views/candidates.html'
+          })
+
+          .state('app.candidatesToLoan', {
+              url: '/candidatesToLoan',
+              templateUrl: 'views/candidatesToLoan.html'
+          })
         .state('app.message', {
           url: '/message',
           templateUrl: 'views/message.html'

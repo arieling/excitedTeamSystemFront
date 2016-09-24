@@ -1,0 +1,33 @@
+<div>
+    <div class="panel" ng-controller="candidatesCtrl">
+        <div class="panel-heading">
+            Loan List
+        </div>
+        <div class="panel-body">
+            <div class="no-more-tables">
+                <table class="table table-striped mb0">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>legal_person</th>
+                        <th>rating</th>
+                        <th>description</th>
+                        <th>action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="candidate in candidateList">
+                        <td data-title="id">{{candidate.id}}</td>
+                        <td data-title="legal_person">{{candidate.name}}</td>
+                        <td data-title="legal_person">{{candidate.legal_person}}</td>
+                        <td data-title="rating">{{candidate.rating}}</td>
+                        <td data-title="description">{{candidate.description}}</td>
+                        <td data-title="Action"><button>Select</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

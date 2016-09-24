@@ -10,8 +10,8 @@
           <p class="text-center mb30">Welcome to {{app.name}}. Please sign in to your account</p>
 
           <div class="form-inputs">
-            <input type="email" class="form-control input-lg" placeholder="Email Address">
-            <input type="password" class="form-control input-lg" placeholder="Password">
+            <input type="email" ng-model="email"  class="form-control input-lg" placeholder="Email Address">
+            <input type="password" ng-model="password" class="form-control input-lg" placeholder="Password">
           </div>
 
           <button class="btn btn-success btn-block btn-lg mb15" type="submit" data-ng-click="submit()">
