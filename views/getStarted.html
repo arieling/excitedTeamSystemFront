@@ -5,7 +5,7 @@
         </div>
         <form role="form">
         	<div class="form-group">
-                <input type="text" class="form-control" ng-model="name" placeholder="Company Name"/>
+                <input type="text" class="form-control" ng-model="company_name" placeholder="Company Name"/>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" ng-model="start_date" placeholder="Founded Date YYYY/MM/DD"/>
@@ -14,16 +14,46 @@
                 <input type="text" class="form-control" ng-model="legal_person" placeholder="Legal Person"/>
             </div>
             <div class="form-group">
+                <input type="text" class="form-control" ng-model="SIN" placeholder="Legal Person SIN"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="capital" placeholder="Capital"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="capital_lasting" placeholder="Time That Capital Lasts"/>
+            </div>
+            <div class="form-group">
       			<input type="text" class="form-control" ng-model="asset" placeholder="Asset"/>
     		</div>
     		<div class="form-group">
-                <input type="text" class="form-control" ng-model="SIN" placeholder="Legal Person SIN"/>
+                <input type="text" class="form-control" ng-model="founders" placeholder="Founders"/>
             </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="liability" placeholder="Liability"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="industry" placeholder="Industry"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="region" placeholder="Region"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="size" placeholder="Size of your company"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="revenue" placeholder="Revenue"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="sector" placeholder="Sector"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="monthly_burn_rate" placeholder="Monthly Burn Rate"/>
+            </div>
+    		
 
     		<div class="alert alert-danger" ng-show="formInfo.error">{{formInfo.error}}</div>
     			<button
-    			    ng-click="register()"
-        			onclick="location.href='#/account'">
+    			    ng-click="register()">
       				Register<i ng-show="formInfo.loggingIn" class="fa fa-spinner fa-spin"></i>
     			</button>
     		<input type="submit" style="display:none" ng-click="login()"/>
